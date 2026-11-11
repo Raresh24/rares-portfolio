@@ -29,8 +29,3 @@ grid.innerHTML = projects.map((project) => `
   </article>
 `).join("");
 
-// Replace this with your real contact address when you are ready to publish.
-const contactEmail = "hello@example.com";
-document.querySelectorAll("[data-email-link]").forEach((link) => {
-  link.href = `mailto:${contactEmail}`;
-});
