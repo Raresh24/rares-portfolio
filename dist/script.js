@@ -2,18 +2,18 @@
 const projects = [
   {
     number: "01",
-    title: "Padel Pro",
-    status: "COMPLETED",
-    description: "A responsive multi-page website about padel, built to bring together player profiles, equipment recommendations, and a clear guide to the rules.",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive design"],
+    title: "Fantasy Pulse",
+    status: "FPL ASSISTANT",
+    description: "A Fantasy Premier League assistant for planning squads, transfers, captain picks, and chips with multi-week projections.",
+    tags: ["Fantasy Premier League", "Squad planning"],
     visual: "visual-padel"
   },
   {
     number: "02",
-    title: "Padel Video Analysis",
-    status: "IN PROGRESS",
-    description: "A portfolio project exploring how match footage could be turned into useful insights for padel players. The MVP is being planned and built step by step.",
-    tags: ["Computer vision", "Video analysis", "Padel"],
+    title: "Rally",
+    status: "PERSONAL PROJECT",
+    description: "Project description coming soon.",
+    tags: [],
     visual: "visual-lines"
   }
 ];
