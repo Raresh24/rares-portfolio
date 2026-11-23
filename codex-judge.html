@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evaluator local pentru solutii C++17 si Python 3, cu teste publice si private, verdicte si punctaj partial.">
+  <meta name="theme-color" content="#0b1017">
+  <title>Codex Judge — Rares Georgescu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="site-shell">
+  <header class="topbar">
+    <a class="wordmark" href="index.html#home"><span class="wordmark-mark">RG</span><span>RARES GEORGESCU</span></a>
+  </header>
+  <main>
+    <section class="project-hero">
+      <a class="text-link" href="index.html#projects">← Back to projects</a>
+      <h1 style="margin-top:24px">Codex Judge</h1>
+      <p class="detail-summary">Evaluator local pentru solutii C++17 si Python 3, cu teste publice si private, verdicte si punctaj partial.</p>
+      <div class="tag-list"><span>Python</span><span>C++17</span><span>Docker</span><span>SQLite</span></div>
+    </section>
+    <div class="case-layout">
+      <aside class="case-toc">
+        <p class="eyebrow">CUPRINS</p>
+        <nav aria-label="Cuprins">
+          <a href="#ce-face">Ce face</a>
+          <a href="#cum-ruleaza-evaluarile">Cum ruleaza evaluarile</a>
+          <a href="#punctaj-partial">Punctaj partial</a>
+          <a href="#probleme-proprii-si-cataloage">Probleme proprii si cataloage</a>
+          <a href="#disponibilitate">Disponibilitate</a>
+        </nav>
+      </aside>
+      <article class="case-content">
+        <h2 id="ce-face">Ce face</h2>
+        <p>Utilizatorul alege o problema, trimite o solutie si vede verdictul pentru fiecare test. Pentru exemplele publice care esueaza, raportul arata prima diferenta din iesire sau diferenta de lungime.</p>
+        <h2 id="cum-ruleaza-evaluarile">Cum ruleaza evaluarile</h2>
+        <p>Browserul trimite solutia catre un API Python. Trimiterile intra intr-o coada SQLite, iar un worker compileaza codul C++ sau verifica sintaxa Python si ruleaza fiecare test intr-un container Docker separat. Istoricul si problemele proprii sunt pastrate in SQLite.</p>
+        <h2 id="punctaj-partial">Punctaj partial</h2>
+        <p>Scorul din 100 este media scorurilor pe teste. Un test acceptat primeste punctaj integral. Pentru iesiri de lungime corecta, dar cu valori gresite, compararea standard acorda jumatate din proportia valorilor corecte pe pozitiile lor. De exemplu, patru valori corecte din cinci aduc 40% din punctajul acelui test.</p>
+        <h2 id="probleme-proprii-si-cataloage">Probleme proprii si cataloage</h2>
+        <p>Aplicatia importa titlul si exemplele publice disponibile din PbInfo, CSES si AtCoder. Pentru probleme proprii poti adauga teste private, seta limite de timp si memorie, folosi o solutie de referinta pentru a completa iesirile si defini un verificator pentru probleme cu mai multe raspunsuri valide.</p>
+        <h2 id="disponibilitate">Disponibilitate</h2>
+        <p>Proiectul ruleaza local cu Python si Docker.</p>
+      </article>
+    </div>
+    <div class="case-back"><a class="text-link" href="index.html#projects">← All projects</a></div>
+  </main>
+  <footer class="footer"><a class="wordmark" href="index.html">RARES GEORGESCU</a><a href="#">BACK TO TOP ↑</a></footer>
+</div></body>
+</html>

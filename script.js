@@ -1,34 +1,36 @@
-// Add new projects here. Keep each description grounded in work you have actually done.
 const projects = [
   {
-    number: "01",
-    title: "Fantasy Pulse",
-    page: "fantasy-pulse.html",
-    status: "FPL ASSISTANT",
-    description: "A Fantasy Premier League assistant for planning squads, transfers, captain picks, and chips with multi-week projections.",
-    tags: ["Fantasy Premier League", "Squad planning"],
-    visual: "visual-padel"
+    title: "Codex Judge",
+    page: "codex-judge.html",
+    description: "A local programming judge that runs C++ and Python submissions against public and private test cases, returning verdicts and partial scores.",
+    tags: ["Python", "C++17", "Docker", "SQLite"]
   },
   {
-    number: "02",
+    title: "Alegerea Ta",
+    page: "university-comparator.html",
+    description: "An interactive catalogue for comparing university programmes in Bucharest by admissions criteria, places, tuition, and Erasmus opportunities.",
+    tags: ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    title: "Fantasy Pulse",
+    page: "fantasy-pulse.html",
+    description: "A Fantasy Premier League assistant for planning squads, transfers, captain picks, and chips with projections across several gameweeks.",
+    tags: ["Fantasy Premier League", "Squad planning"]
+  },
+  {
     title: "Rally",
     page: "rally.html",
-    status: "LIVE SCORING",
     description: "A web platform for live padel scores, match statistics, and broadcast graphics through OBS.",
-    tags: ["HTML", "CSS", "JavaScript", "Python", "OBS"],
-    visual: "visual-lines"
+    tags: ["HTML", "CSS", "JavaScript", "Python", "OBS"]
   }
 ];
 
 const grid = document.querySelector("#project-grid");
 grid.innerHTML = projects.map((project) => `
   <article class="project-card">
-    <div class="card-top"><span class="card-number">${project.number} / PROJECT</span><span class="card-status">${project.status}</span></div>
-    <div class="project-visual ${project.visual}" aria-hidden="true"></div>
     <h3><a class="project-title-link" href="${project.page}">${project.title}</a></h3>
     <p>${project.description}</p>
     <div class="tag-list">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-    <a class="card-link" href="${project.page}">Explore project <span aria-hidden="true">↗</span></a>
+    <a class="card-link" href="${project.page}" aria-label="Explore ${project.title}">Explore project <span aria-hidden="true">↗</span></a>
   </article>
 `).join("");
-
