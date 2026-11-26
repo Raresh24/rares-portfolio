@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Evaluator local pentru solutii C++17 si Python 3, cu teste publice si private, verdicte si punctaj partial.">
-  <meta name="theme-color" content="#0b1017">
+  <meta name="theme-color" content="#f7f4ed">
   <title>Codex Judge — Rares Georgescu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,32 +15,24 @@
   <main>
     <section class="project-hero">
       <a class="text-link" href="index.html#projects">← Back to projects</a>
-      <h1 style="margin-top:24px">Codex Judge</h1>
+      <h1 class="project-heading">Codex Judge</h1>
       <p class="detail-summary">Evaluator local pentru solutii C++17 si Python 3, cu teste publice si private, verdicte si punctaj partial.</p>
       <div class="tag-list"><span>Python</span><span>C++17</span><span>Docker</span><span>SQLite</span></div>
     </section>
     <div class="case-layout">
       <aside class="case-toc">
         <p class="eyebrow">CUPRINS</p>
-        <nav aria-label="Cuprins">
-          <a href="#ce-face">Ce face</a>
-          <a href="#cum-ruleaza-evaluarile">Cum ruleaza evaluarile</a>
-          <a href="#punctaj-partial">Punctaj partial</a>
-          <a href="#probleme-proprii-si-cataloage">Probleme proprii si cataloage</a>
-          <a href="#disponibilitate">Disponibilitate</a>
-        </nav>
+        <nav aria-label="Cuprins"><a href="#ce-face">Ce face</a><a href="#cum-ruleaza-evaluarile">Cum ruleaza evaluarile</a><a href="#punctaj-partial">Punctaj partial</a><a href="#probleme-proprii-si-cataloage">Probleme proprii si cataloage</a></nav>
       </aside>
       <article class="case-content">
         <h2 id="ce-face">Ce face</h2>
-        <p>Utilizatorul alege o problema, trimite o solutie si vede verdictul pentru fiecare test. Pentru exemplele publice care esueaza, raportul arata prima diferenta din iesire sau diferenta de lungime.</p>
+        <p>Codex Judge evalueaza local solutii scrise in C++17 si Python 3. Alegi o problema, trimiti codul si primesti un verdict pentru fiecare exemplu public si test privat. La un exemplu public gresit, raportul poate indica prima valoare diferita sau un numar incorect de valori, ca sa stii unde sa incepi depanarea.</p>
         <h2 id="cum-ruleaza-evaluarile">Cum ruleaza evaluarile</h2>
-        <p>Browserul trimite solutia catre un API Python. Trimiterile intra intr-o coada SQLite, iar un worker compileaza codul C++ sau verifica sintaxa Python si ruleaza fiecare test intr-un container Docker separat. Istoricul si problemele proprii sunt pastrate in SQLite.</p>
+        <p>Interfata trimite codul catre un API Python, care pune trimiterea intr-o coada SQLite. Un proces de fundal preia trimiterea, compileaza codul C++ sau verifica sintaxa Python, apoi ruleaza fiecare test intr-un container Docker separat. Limitele de timp si memorie fac posibila diferentierea intre un raspuns gresit si o solutie care depaseste resursele alocate.</p>
         <h2 id="punctaj-partial">Punctaj partial</h2>
-        <p>Scorul din 100 este media scorurilor pe teste. Un test acceptat primeste punctaj integral. Pentru iesiri de lungime corecta, dar cu valori gresite, compararea standard acorda jumatate din proportia valorilor corecte pe pozitiile lor. De exemplu, patru valori corecte din cinci aduc 40% din punctajul acelui test.</p>
+        <p>Scorul din 100 este media punctajelor obtinute pe teste. Un test corect primeste punctaj integral. Daca iesirea are lungimea asteptata, dar numai 4 din 5 valori sunt corecte la pozitiile lor, testul primeste 40% din punctajul sau si pastreaza verdictul „Raspuns gresit”. O eroare la rulare sau un numar gresit de valori aduce zero pentru acel test.</p>
         <h2 id="probleme-proprii-si-cataloage">Probleme proprii si cataloage</h2>
-        <p>Aplicatia importa titlul si exemplele publice disponibile din PbInfo, CSES si AtCoder. Pentru probleme proprii poti adauga teste private, seta limite de timp si memorie, folosi o solutie de referinta pentru a completa iesirile si defini un verificator pentru probleme cu mai multe raspunsuri valide.</p>
-        <h2 id="disponibilitate">Disponibilitate</h2>
-        <p>Proiectul ruleaza local cu Python si Docker.</p>
+        <p>Poti importa titlul si exemplele publice disponibile din PbInfo, CSES si AtCoder sau poti crea propria problema. Poti genera iesiri folosind o solutie de referinta si adauga un verificator personalizat. De exemplu, la o problema de drum minim, verificatorul poate accepta doua trasee diferite daca ambele sunt valide si au costul minim.</p>
       </article>
     </div>
     <div class="case-back"><a class="text-link" href="index.html#projects">← All projects</a></div>
