@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Atlas bilingv de web design: 40 de stiluri, fiecare cu demo interactiv, si 240 de prompturi pentru crearea sau redesignul unui site.">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>Forme — Rares Georgescu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><div class="site-shell">
+  <header class="topbar">
+    <a class="wordmark" href="index.html#home"><span class="wordmark-mark">RG</span><span>RARES GEORGESCU</span></a>
+  </header>
+  <main>
+    <section class="project-hero">
+      <a class="text-link" href="index.html#projects">← Back to projects</a>
+      <p class="eyebrow">WEB DESIGN ATLAS · RO / EN</p>
+      <h1 class="project-heading">Forme</h1>
+      <p class="detail-summary">Atlas bilingv de web design: 40 de stiluri, fiecare cu demo interactiv, si 240 de prompturi pentru crearea sau redesignul unui site.</p>
+      <div class="tag-list"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Node.js</span><span>Playwright</span></div>
+    </section>
+    <div class="case-layout">
+      <aside class="case-toc">
+        <p class="eyebrow">CUPRINS</p>
+        <nav aria-label="Cuprins"><a href="#ce-este-forme">Ce este Forme</a><a href="#stilurile-si-demo-urile">Stilurile si demo-urile</a><a href="#prompturile">Prompturile</a><a href="#instrumentele">Instrumentele</a><a href="#cum-a-fost-construit">Cum a fost construit</a><a href="#verificari-si-limite">Verificari si limite</a></nav>
+      </aside>
+      <article class="case-content">
+        <h2 id="ce-este-forme">Ce este Forme</h2>
+        <p>Forme este un catalog de inspiratie pentru web design, disponibil in romana si engleza. Reuneste 40 de stiluri vizuale, de la Swiss Grid si Neo-Brutalism la Liquid Glass, Terminal TUI sau Pixel Art. Pentru fiecare stil, aplicatia arata cum arata, din ce este construit si cum poate fi cerut unui asistent AI care genereaza cod.</p>
+
+        <h2 id="stilurile-si-demo-urile">Stilurile si demo-urile</h2>
+        <p>Fiecare stil are propriul mini-site functional, scris special pentru el. Demo-ul are trei sectiuni: o introducere, componentele tipice ale stilului si un exercitiu interactiv. Imaginile din catalog sunt capturi reale ale acestor demo-uri, facute automat cu un browser fara interfata, nu imagini stoc sau generate.</p>
+        <p>Pagina unui stil contine descrierea, paleta de sase culori, fonturile, stilurile asemanatoare si un „Design DNA”: tokenii, scara tipografica si componentele care fac stilul reproductibil.</p>
+
+        <h2 id="prompturile">Prompturile</h2>
+        <p>Pentru fiecare stil exista trei prompturi, unul pentru fiecare scop: crearea unui site nou, redesignul complet al unuia existent si rafinarea unui design. Asta inseamna 120 de prompturi canonice, fiecare in romana si engleza, deci 240 de versiuni. Un script de validare verifica textele pentru trunchieri, contradictii, prompturi prea asemanatoare intre stiluri si echivalenta dintre cele doua limbi.</p>
+
+        <h2 id="instrumentele">Instrumentele</h2>
+        <ul>
+          <li><strong>Prompt Builder</strong> ajusteaza promptul la proiectul tau. Daca o culoare aleasa are contrast sub 4.5:1, promptul foloseste automat o culoare de text lizibila.</li>
+          <li><strong>Style Mixer</strong> combina doua stiluri, cu unul dominant, si permite alegerea proprietatilor preluate de la fiecare.</li>
+          <li><strong>Design Finder</strong> recomanda cele mai potrivite cinci stiluri pe baza unui set de intrebari, cu un scor explicat pentru fiecare raspuns.</li>
+          <li><strong>Comparison Studio</strong> pune stilurile unul langa altul, inclusiv intr-o vedere Before/After pentru doua stiluri.</li>
+          <li><strong>Live Style Playground</strong> deschide demo-urile intr-un frame izolat si arata, la click, ce face fiecare element interactiv.</li>
+          <li><strong>Prompt Workshop</strong> permite editarea prompturilor. Modificarile se pastreaza separat, iar textul canonic nu este suprascris.</li>
+          <li><strong>Cautare dupa imagine</strong> compara o imagine incarcata cu stilurile din atlas dupa culoare, luminozitate, contrast si cat de aglomerat este designul.</li>
+        </ul>
+        <p>Favoritele, colectiile si prompturile editate se salveaza local in browser si pot fi exportate sau importate ca fisier JSON.</p>
+
+        <h2 id="cum-a-fost-construit">Cum a fost construit</h2>
+        <p>Aplicatia foloseste JavaScript fara framework si fara pas de build, organizat in module ES. Navigarea are loc in aceeasi pagina, iar fiecare sectiune se incarca doar cand este deschisa. Fonturile sunt locale, deci aplicatia nu are nevoie de internet ca sa ruleze.</p>
+        <p>Un server mic in Node.js serveste fisierele. Optional, el poate trimite cereri catre un serviciu AI pentru sugestii in Prompt Workshop, cu cheia pastrata doar pe server. Fara cheie, functia este oprita si interfata spune asta clar.</p>
+        <p>Adaugarea unui stil nou inseamna un fisier de date, un demo si cateva comenzi: sincronizarea tokenilor, capturile automate si validarea. Prompturile, Design DNA si celelalte instrumente preiau stilul automat.</p>
+
+        <h2 id="verificari-si-limite">Verificari si limite</h2>
+        <p>Proiectul include teste in browser, rulate cu Playwright pe latimi de ecran intre 360 si 1920 de pixeli, care parcurg fluxurile principale si toate cele 40 de demo-uri. Un audit separat masoara cat de diferite sunt stilurile intre ele, ca sa nu existe doua stiluri aproape identice.</p>
+        <p>Cautarea dupa imagine nu recunoaste layoutul sau tipografia, ci doar caracteristicile de culoare si densitate. Sugestiile AI depind de configurarea unei chei de acces pe server.</p>
+      </article>
+    </div>
+    <div class="case-back"><a class="button button-primary" href="index.html#projects">← All projects</a><a class="text-link" href="codex-judge.html">Next: Codex Judge ↗</a></div>
+  </main>
+  <footer class="footer"><a class="wordmark" href="index.html">RARES GEORGESCU</a><span>PORTFOLIO · 2026</span><a href="#">BACK TO TOP ↑</a></footer>
+</div></body>
+</html>
