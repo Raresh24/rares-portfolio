@@ -134,13 +134,6 @@ main:has(.standalone-case:target, .standalone-case :target) > .standalone-home {
   .cv-hero h1, .standalone-case:target .project-hero, .standalone-case:has(:target) .project-hero {
     animation: editorial-enter .55s cubic-bezier(.2,.65,.3,1) both;
   }
-  @supports (animation-timeline: view()) {
-    .project-card {
-      animation: editorial-enter auto linear both;
-      animation-timeline: view();
-      animation-range: entry 4% entry 58%;
-    }
-  }
 }
 @media (max-width: 880px) {
   .cv-hero h1 { font-size: clamp(3.8rem, 10.2vw, 7rem); }
